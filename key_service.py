@@ -45,8 +45,12 @@ def generate_key_for_decryption(key_map):
 Swaps key using distances
 """
 def key_swap(key, pos, distance):
-	print("Swapping %s,%d with %s,%d ",key[pos],pos,key[pos + distance], pos+distance)
+#	print("Before swap:")
+#	print(key)
+#	print("Swapping {},{} with {},{}".format(key[pos],pos,key[pos+distance], pos+distance))
 	temp = str(key[pos])
 	key[pos] = str(key[pos + distance])
-	key[distance] = temp
+	key[pos + distance] = temp
+#	print("After swap:")
+#	print(key)
 	return key
